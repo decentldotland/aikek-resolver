@@ -1,6 +1,6 @@
 {
   "name": "aikek-resolver",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Namespaces AIKEK resolver",
   "main": "./src/api.js",
   "type": "module",
