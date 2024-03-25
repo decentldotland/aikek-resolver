@@ -32,7 +32,7 @@ npm install && npm run start
 ### Fetch all addresses owning at least a domain
 
 - `GET /eoas`
-- 
+
 ## License
 
 This project is licensed under the [MIT License](./LICENSE)
