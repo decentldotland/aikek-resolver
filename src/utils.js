@@ -69,3 +69,16 @@ export async function getAllDomains(addr) {
     return [];
   }
 }
+
+export async function getAllAddresses() {
+  try {
+    const domains = (await getState())?.domains;
+    const addresses = Array.from(
+      new Set(domains.map((domain) => domain.owner)),
+    );
+    return addresses;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
