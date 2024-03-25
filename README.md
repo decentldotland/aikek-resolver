@@ -29,6 +29,10 @@ npm install && npm run start
 
 - `GET /acc/:addr`
 
+### Fetch all addresses owning at least a domain
+
+- `GET /eoas`
+- 
 ## License
 
 This project is licensed under the [MIT License](./LICENSE)
