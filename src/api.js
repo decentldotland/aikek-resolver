@@ -1,7 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import { resolveDomain, resolveAddr, getAllDomains } from "./utils.js";
+import {
+  resolveDomain,
+  resolveAddr,
+  getAllDomains,
+  getAllAddresses,
+} from "./utils.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -63,6 +68,16 @@ app.get("/acc/:addr", async (req, res) => {
   } catch (error) {
     console.log(error);
     return {};
+  }
+});
+
+app.get("/eoas", async (req, res) => {
+  try {
+    const response = await getAllAddresses();
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    return [];
   }
 });
 
