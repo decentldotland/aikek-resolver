@@ -6,8 +6,8 @@ const AIKEK_FUNC_ADDR = `uDkavqXbZ1QOXt7SNr-cjxOYNAAplUzF4ob78LzMDL4`;
 async function getState() {
   try {
     return (
-      await axios.get(`https://api.mem.tech/api/state/${AIKEK_FUNC_ADDR}`)
-    )?.data;
+      await axios.get(`https://gateway.load.rs/bundle/0x6c05cd5b64db6685060e81e964a05ab960a5c82debd681b58ffd46c332bf0dba/0`)
+    )?.data?.state;
   } catch (error) {
     console.log(error);
     return {};
